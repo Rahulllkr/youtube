@@ -1,0 +1,1048 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+body{
+    scroll-behavior: smooth;
+    background-color:#0F0F0F;
+}
+a{
+    text-decoration: none;
+}
+.nav-container{
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:0.2rem;
+    position: fixed;
+    top: 0;
+    background-color: #0F0F0F;
+    z-index: 1;
+}
+.nav-left{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    font-size: 0.5rem;
+    padding: 0 1.6rem;
+    gap: 1.3rem;
+}
+.nav-left svg{
+    height: 1.6rem;
+}
+.hamburger{
+    border-radius: 50px;
+    transition:0.2s ease-in-out;
+}
+.hamburger:hover{
+    background-color: #3F3F3F;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:0.3s ease-in-out;
+}
+.logo-container{
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family:Impact,'Arial Narrow Bold', sans-serif;
+    gap: 3px;
+}
+.logo-container svg{
+    height: 1.3rem;
+}
+.nav-middle{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding-left: 2rem;
+}
+.nav-search{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.348);
+    border-radius: 40px;
+}
+.nav-search input{
+    padding: 0 1rem;
+    align-items: center;
+    border: none;
+    border-top-left-radius:40px ;
+    border-bottom-left-radius:40px ;
+    background-color: transparent;
+    color: white;
+    text-align: start;
+    width: 33rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.nav-search svg{
+    height: 2.6rem;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 0.5rem 1.2rem;
+    background-color:#222222;
+}
+.nav-mic-search{
+    display: flex;
+    align-items: center;
+    border: transparent;
+    border-radius: 50px;
+    background-color: #222222;
+    padding: 12px;
+}
+.nav-mic-search:hover{
+    background-color: #3F3F3F;
+    transition: 0.3s ease-in-out;
+}
+.nav-mic-search svg{
+    height: 1.3rem;
+}
+.nav-right{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 10px;
+}
+.nav-create{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size:0.8rem;
+    border-radius: 40px;
+    background-color:#222222;
+    margin: 7px 0;
+    padding: 8px 10px;
+    gap: 4px;
+}
+.nav-create:hover{
+    background-color: #3F3F3F;
+    transition: 0.3s ease-in-out;
+}
+.nav-create svg{
+    height: 1.5rem;
+}
+.nav-create h3{
+    padding-right:10px;
+    font-size: 0.8rem;
+}
+.nav-bell{
+    display: flex;
+    align-items: center;
+}
+.nav-bell svg{
+    height: 1.4rem;
+}
+.nav-profile{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+.nav-profile svg{
+    height: 1.8rem;
+}
+.sidebar{
+    height: 100vh;
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 0 0.2rem;
+    margin-top: 4rem;
+    position: fixed;
+    top:0.25rem ;
+}
+.sidebar a {
+  text-decoration: none; 
+  color: inherit;         
+  width: 100%;            
+  /* display: block;          */
+}
+.home-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    padding: 1rem 1.2rem;
+    gap: 0.5rem;
+}
+.home-bar svg{
+    height: 1.3rem;
+}
+.home-bar h5{
+    font-size: 0.65rem;
+}
+.home-bar:hover{
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #3F3F3F;
+}
+.shorts-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    padding: 1rem 1.2rem;
+    gap: 0.5rem;
+}
+.shorts-bar svg{
+    height: 1.4rem;
+}
+.shorts-bar h5{
+    font-size: 0.65rem;
+}
+.shorts-bar:hover{
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #3F3F3F;
+}
+.subscription-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center; 
+    padding: 1rem 1.2rem;
+    gap: 0.5rem;
+}
+.subscription-bar svg{
+    height: 1.5rem;
+}
+.subscription-bar h5{
+    font-size: 0.65rem;
+}
+.subscription-bar:hover{
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #3F3F3F;
+}
+.user-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    padding: 1rem 1.2rem;
+    gap: 0.5rem;
+}
+.user-bar svg{
+    height: 1.4rem;
+}
+.user-bar h5{
+    font-size: 0.65rem;
+    padding-top: 0px;
+}
+.user-bar:hover{
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #3F3F3F;
+}
+.download-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    padding: 1rem 1.2rem;
+    gap: 0.5rem;
+}
+.download-bar svg{
+    height: 1.5rem;
+}
+.download-bar h5{
+    font-size: 0.65rem;
+}
+.download-bar:hover{
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #3F3F3F;
+}
+.slide-container{
+    display: none;
+    height: 100vh;
+    width: 15vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    margin-top: 3rem;
+    position: fixed;
+    top:0.25rem ;
+    overflow: scroll;
+    scrollbar-width:none;
+    background-color: #0F0F0F;
+    z-index:1;
+}
+.hover-btn:hover{
+    background-color:#3F3F3F;
+}
+.slide-section-first{
+    height: 9rem;
+    width: 100%;
+    font-size: 0.7rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.373);
+    cursor: pointer;
+    padding-top: 0.5rem;
+}
+.home{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    padding: 0.6rem 1.1rem;
+    border-radius: 20px;
+}
+.home h3{
+    padding-left:1.75rem;
+    padding-top: 0.3em;
+}
+.home svg{
+    height: 1.3rem;
+}
+.shorts{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+.shorts h3{
+    padding-left:1.6rem;
+    padding-top: 0.25em;
+}
+.shorts svg{
+    height: 1.5rem;
+}
+.subscription{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+.subscription h3{
+    padding-left:1.7rem;
+    padding-top: 0.25em;
+}
+.subscription svg{
+    height: 1.45rem;
+}
+.slide-section-second{
+    height: 17rem;
+    width: 100%;
+    font-size: 0.7rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.373);
+    cursor: pointer;
+    padding-top: 0.5rem;
+}
+.you{
+    color: white;
+    display: flex;
+    padding: 0.6rem 1rem;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+.you svg{
+    height: 1.4rem;
+    padding-bottom: 0.2rem;
+}
+.history{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    padding: 0.6rem 1.1rem;
+    border-radius: 20px;
+}
+.history h3{
+    padding-left:1.6rem;
+    padding-top: 0.25em;
+}
+.history svg{
+    height: 1.3rem;
+}
+.playlist{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+}
+.playlist h3{
+    padding-left:1.5rem;
+    padding-top: 0.28em;
+}
+.playlist svg{
+    height: 1.5rem;
+}
+.watch-later{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+}
+.watch-later h3{
+    padding-left:1.5rem;
+    padding-top: 0.28em;
+}
+.watch-later svg{
+    height: 1.45rem;
+}
+.liked{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 20px;
+}
+.liked h3{
+    padding-left:1.5rem;
+    padding-top: 0.35em;
+}
+.liked svg{
+    height: 1.45rem;
+}
+.downloads{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+.downloads h3{
+    padding-left:1.5rem;
+    padding-top: 0.35em;
+}
+.downloads svg{
+    height: 1.45rem;
+}
+.slide-section-third{
+    height: 11.5rem;
+    width: 100%;
+    font-size: 0.7rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.373);
+    cursor: pointer;
+    padding-top: 0.5rem;
+
+}
+.subscriptions{
+    color: white;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+.subscribe-first{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.6rem 1rem;
+    color: white;
+    border-radius: 20px;
+}
+.subscribe-first h3{
+    padding-left:1.4rem;
+    padding-top: 0.25em;
+}
+.subscribe-first svg{
+    height: 1.55rem;
+}
+.subscribe-second{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.6rem 1rem;
+    color: white;
+    border-radius: 20px;
+}
+.subscribe-second h3{
+    padding-left:1.5rem;
+    padding-top: 0.25em;
+}
+.subscribe-second svg{
+    height: 1.45rem;
+}
+.all-subscription{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.2rem 0.6rem;
+    color: white;
+    border-radius: 20px;
+}
+.all-subscription h3{
+    padding-left:1.1rem;
+    padding-top: 0.8em;
+}
+.all-subscription svg{
+    height: 2.3rem;
+}
+.slide-section-fourth{
+    height: 31.5rem;
+    width: 100%;
+    font-size: 0.7rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.373);
+    cursor: pointer;
+    color: white;
+    padding-top: 0.5rem;
+}
+.explore{
+    display: flex;
+    padding: 0.6rem 1rem;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+.trending{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;  
+}
+.trending h3{
+    padding-left:1.3rem;
+    padding-top: 0.4em;
+}
+.trending svg{
+    height: 1.6rem;
+}
+.shoping{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;  
+}
+.shoping h3{
+    padding-left:1.3rem;
+    padding-top: 0.4em;
+}
+.shoping svg{
+    height: 1.6rem;
+}
+.music{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;  
+}
+.music h3{
+    padding-left:1.5rem;
+    padding-top: 0.4em;
+}
+.music svg{
+    height: 1.5rem;
+}
+.movies{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;  
+}
+.movies h3{
+    padding-left:1.6rem;
+    padding-top: 0.4em;
+}
+.movies svg{
+    height: 1.4rem;
+}
+.live{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;  
+}
+.live h3{
+    padding-left:1.6rem;
+    padding-top: 0.4em;
+}
+.live svg{
+    height: 1.5rem;
+}
+.gaming{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;  
+}
+.gaming h3{
+    padding-left:1.5rem;
+    padding-top: 0.4em;
+}
+.gaming svg{
+    height: 1.5rem;
+}
+.news{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1.1rem;
+    border-radius: 20px;  
+}
+.news h3{
+    padding-left:1.6rem;
+    padding-top: 0.4em;
+}
+.news svg{
+    height: 1.3rem;
+}
+.sports{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 0.9rem;
+    border-radius: 20px;  
+
+}
+.sports h3{
+    padding-left:1.3rem;
+    padding-top: 0.4em;
+}
+.sports svg{
+    height: 1.65rem;
+}
+.course{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;  
+
+}
+.course h3{
+    padding-left:1.3rem;
+    padding-top: 0.4em;
+}
+.course svg{
+    height: 1.7rem;
+}
+.fashion{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 0.9rem;
+    border-radius: 20px;  
+
+}
+.fashion h3{
+    padding-left:1.3rem;
+    padding-top: 0.6em;
+}
+.fashion svg{
+    height: 1.8rem;
+}
+.podcast{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;  
+}
+.podcast h3{
+    padding-left:1.3rem;
+    padding-top: 0.4em;
+}
+.podcast svg{
+    height: 1.6rem;
+}
+.slide-section-fifth{
+    height: 11.5rem;
+    width: 100%;
+    font-size: 0.7rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.373);
+    cursor: pointer;
+    color: white;
+    padding-top: 0.5rem;
+}
+.more-from-youtube{
+    display: flex;
+    padding: 0.6rem 1rem;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+.yt-premium{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;  
+}
+.yt-premium h3{
+    padding-left:1.2rem;
+    padding-top: 0.55em;
+}
+.yt-premium svg{
+    height: 1.9rem;
+}
+.yt-music{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.4rem 1.1rem;
+    border-radius: 20px;  
+}
+.yt-music h3{
+    padding-left:1.3rem;
+    padding-top: 0.55em;
+}
+.yt-music svg{
+    height: 1.7rem;
+}
+.yt-kids{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1.1rem;
+    border-radius: 20px;  
+}
+.yt-kids h3{
+    padding-left:1.25rem;
+    padding-top: 0.55em;
+}
+.yt-kids svg{
+    height: 1.9rem;
+}
+.slide-section-sixth{
+    height: 12rem;
+    padding-top: 0.6rem;
+    width: 100%;
+    font-size: 0.7rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.373);
+    cursor: pointer;
+    color: white;
+}
+.setting{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1.1rem;
+    border-radius: 20px;  
+}
+.setting h3{
+    padding-left:1.25rem;
+    padding-top: 0.55em;
+}
+.setting svg{
+    height: 1.65rem;
+}
+.rp-history{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1.1rem;
+    border-radius: 20px;  
+}
+.rp-history h3{
+    padding-left:1.25rem;
+    padding-top: 0.55em;
+}
+.rp-history svg{
+    height: 1.6rem;
+}
+.help{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1.1rem;
+    border-radius: 20px;  
+}
+.help h3{
+    padding-left:1.25rem;
+    padding-top: 0.55em;
+}
+.help svg{
+    height: 1.6rem;
+}
+.feedback{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1.1rem;
+    border-radius: 20px;  
+}
+.feedback h3{
+    padding-left:1.25rem;
+    padding-top: 0.55em;
+}
+.feedback svg{
+    height: 1.6rem;
+}
+.footer{
+    height: 12rem;
+    padding-top: 0.6rem;
+    width: 100%;
+    font-size: 0.7rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.373);
+    cursor: pointer;
+    color: white;  
+}
+.footer-cm{
+    width: 100%;
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.611);
+    padding-top: 0.8rem;
+    padding-left:0.8rem ;
+    padding-right: 0.8rem;
+    word-spacing: 0.3rem;
+}
+.footer-3{
+    color: rgba(255, 255, 255, 0.332);
+}
+.categories{
+    height: 4rem;
+    width: 94%;
+    background-color:#0F0F0F;
+    margin-left: 5rem;
+    position: fixed;
+    top: 3.5rem;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 0.9rem 2rem;
+    scrollbar-width: none;
+    z-index: 1;
+}
+.categories-item{
+    background-color: #222222;
+    color: white;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0 1rem;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    cursor: pointer;
+    margin-right: 0.6rem;
+}
+.categories-item:hover{
+    background-color:#3F3F3F;
+    transition: 0.3s ease-in-out;
+}
+.main-first-container{
+    height: 100%;
+    width: 94%;
+    /* background-color: aqua; */
+    margin-left: 5rem;
+    margin-top: 7.5rem;
+    padding: 1rem 0.5rem;   
+    display: flex;
+    gap: 0.8rem;
+}
+.main-second-container{
+    height: 100%;
+    width: 94%;
+    /* background-color: aqua; */
+    margin-left: 5rem;
+    padding: 1rem 0.5rem;   
+    display: flex;
+    gap: 0.8rem;
+}
+.main-content{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.main-video-1{
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+.main-video-1 video{
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+}
+.main-logo-text-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.profile-logo img{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 40px;
+    margin-right: 0.5rem;
+}
+.profile-text{
+    width: 100%;
+    line-height: 1.3rem;
+}
+.profile-text h3{
+    font-size: 1rem;
+    color: white;
+}
+.profile-text p{
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.585);
+}
+.three-dot svg{
+    height: 1.5rem;
+    color: white;
+
+}
+.main-shorts-section{
+    height: 100%;
+    width: 94%;
+    /* background-color: aqua; */
+    margin-left: 5rem;
+    padding: 1rem 2rem;   
+    display: flex;
+    gap: 0.8rem;
+}
+.main-shorts-logo-container{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+}
+.main-shorts-logo-container svg{
+    height: 1.7rem;
+}
+.main-shorts-container{
+    height: 70vh;
+    width: 93%;
+    /* background-color: aqua; */
+    margin-left: 5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 6rem;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    gap: 0.8rem;
+    color: white;
+    font-size: 0.8rem;
+}
+.main-shorts-container video{
+    width: 14.5vw;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.shorts-page{
+    height: 100vh;
+    width: auto;
+    /* background-color:brown; */
+    margin-left: 5rem;
+    margin-top:4rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.shorts-page-video{
+    height: 100%;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+}
+.shorts-page-col-first{
+    height: 90%;
+    width: 30%;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    padding: 4rem 3rem;
+}
+.shorts-page-col-first-name{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.shorts-page-col-first-name button{
+    border: none;
+    border-radius: 20px;
+    padding: 0.6rem 0.8rem;
+}
+.shorts-page-col-first-name svg{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.shorts-page-col-first-musicTitle{
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+}
+.shorts-page-col-first-musicTitle svg{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.shorts-page-col-second{
+    height: 90%;
+    width: 30%;
+    /* background-color: cadetblue; */
+    display: flex;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.shorts-page-col-second-video video{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.shorts-page-col-second-icons{
+    margin-left: 0.8rem;
+    margin-top: 8rem;
+    text-align: center;
+}
+.shorts-page-col-second-icons div{
+    margin-bottom: 1rem;
+}
+.shorts-page-col-second-icons svg{
+    height: 3rem;
+    width: 3rem;
+    background-color: #3F3F3F;
+    padding: 0.8rem;
+    border-radius: 50%;
+    /* margin-bottom: 0.5rem; */
+}
+.shorts-page-col-second-comment svg{
+    height: 3rem;
+    width: 3rem;
+    padding: 0.5rem;
+}
+.shorts-page-col-second-share svg{
+    height: 3rem;
+    width: 3rem;
+    padding: 0.65rem;
+}
+.shorts-page-col-second-music img{
+    height: 2.5rem;
+    width: 3rem;
+    border-radius: 10px;
+}
+.shorts-page-col-third{
+    height: 90%;
+    width: 30%;
+    /* background-color:darkcyan; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 1rem;
+    gap: 0.5rem;
+
+}
+.shorts-page-col-third-uparrow svg{
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #3F3F3F;
+    border-radius: 50%;
+    padding: 0.8rem;
+}
+.shorts-page-col-third-downarrow svg{
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #3F3F3F;
+    border-radius: 50%;
+    padding: 0.8rem;
+}
